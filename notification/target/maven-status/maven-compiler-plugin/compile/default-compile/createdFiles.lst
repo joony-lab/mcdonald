@@ -1,0 +1,10 @@
+newmcdonaldapp\DeliveryStart.class
+newmcdonaldapp\AbstractEvent.class
+newmcdonaldapp\Ordered.class
+newmcdonaldapp\OrderCanceled.class
+newmcdonaldapp\PayApprove.class
+newmcdonaldapp\AbstractEvent$1.class
+newmcdonaldapp\NotificationApplication.class
+newmcdonaldapp\PolicyHandler.class
+newmcdonaldapp\config\kafka\KafkaProcessor.class
+newmcdonaldapp\CookStarted.class

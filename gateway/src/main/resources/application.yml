@@ -1,0 +1,82 @@
+server:
+  port: 8088
+
+---
+
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: orderBurger
+          uri: http://localhost:8081
+          predicates:
+            - Path=/orders/** /menus/**
+        - id: selectStore
+          uri: http://localhost:8082
+          predicates:
+            - Path=/branches/** 
+        - id: pay
+          uri: http://localhost:8083
+          predicates:
+            - Path=/payHistories/** 
+        - id: store
+          uri: http://localhost:8084
+          predicates:
+            - Path=/storeManagements/** 
+        - id: notification
+          uri: http://localhost:8085
+          predicates:
+            - Path= 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+
+---
+
+spring:
+  profiles: docker
+  cloud:
+    gateway:
+      routes:
+        - id: orderBurger
+          uri: http://orderBurger:8080
+          predicates:
+            - Path=/orders/** /menus/**
+        - id: selectStore
+          uri: http://selectStore:8080
+          predicates:
+            - Path=/branches/** 
+        - id: pay
+          uri: http://pay:8080
+          predicates:
+            - Path=/payHistories/** 
+        - id: store
+          uri: http://store:8080
+          predicates:
+            - Path=/storeManagements/** 
+        - id: notification
+          uri: http://notification:8080
+          predicates:
+            - Path= 
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "*"
+            allowedMethods:
+              - "*"
+            allowedHeaders:
+              - "*"
+            allowCredentials: true
+
+server:
+  port: 8080

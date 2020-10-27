@@ -1,0 +1,11 @@
+newmcdonaldapp\AbstractEvent.class
+newmcdonaldapp\SelectStoreApplication.class
+newmcdonaldapp\Branch.class
+newmcdonaldapp\BranchRegistered.class
+newmcdonaldapp\AbstractEvent$1.class
+newmcdonaldapp\PolicyHandler.class
+newmcdonaldapp\external\OrderService.class
+newmcdonaldapp\config\kafka\KafkaProcessor.class
+newmcdonaldapp\BranchRepository.class
+newmcdonaldapp\external\Order.class
+newmcdonaldapp\BranchController.class
